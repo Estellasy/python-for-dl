@@ -1,0 +1,34 @@
+conda create -n uie --offline python=3.8 # 离线创建虚拟环境
+conda activate uie # 激活
+# 下载pytorch（cuda117）
+
+ps不显示环境解决办法
+conda init powershell
+get-executionpolicy
+
+set-executionpolicy remotesigned（管理员）
+
+set-executionpolicy restricted（更改回去）
+
+conda create -n uie_py38 --offline python=3.8
+
+# Get-ChildItem -Filter *.whl | ForEach-Object { pip install $_.FullName }
+
+pip install -r requirements.txt --no-index --find-links=./whls
+
+# 下载whl及其依赖到本地
+pip download -r requirements.txt -d dirs
+
+
+conda create -n test_py37 --offline python=3.7 # 离线创建虚拟环境
+
+
+# 离线创建py38环境
+# 创建包目录，路径anaconda/envs/uie_py38
+# 查看是否有该目录（应该是没有的）
+conda info --envs
+# 进入环境
+# 安装python
+conda install python tar bz
+# 安装pip
+conda install pip tar bz
